@@ -5,7 +5,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         width: "100%",
         justifyContent: "space-between",
-        padding: 10
+        padding: 10,
+        borderBottomColor: 'grey',
+        // borderBottom: 2
     },
     leftContainer: {
         flexDirection: "row"
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
     },
     midContainer: {
         justifyContent: "space-around",
-        // marginRight: 10
+        marginRight: 10,
 
     },
     avatar: {

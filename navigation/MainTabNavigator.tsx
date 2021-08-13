@@ -7,7 +7,7 @@ import { Fontisto } from '@expo/vector-icons';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/ChatRoom';
+import ChatRoom from '../screens/ChatRoom';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
@@ -49,15 +49,15 @@ export default function BottomTabNavigator() {
       />
       <MainTab.Screen
         name="Chats"
-        component={TabTwoNavigator}
+        component={ChatRoomNavigator}
       />
       <MainTab.Screen
         name="Status"
-        component={TabTwoNavigator}
+        component={ChatRoomNavigator}
       />
       <MainTab.Screen
         name="Calls"
-        component={TabTwoNavigator}
+        component={ChatRoomNavigator}
       />
     </MainTab.Navigator>
   );
@@ -87,13 +87,13 @@ function TabOneNavigator() {
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
-function TabTwoNavigator() {
+function ChatRoomNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        name="ChatRoom"
+        component={ChatRoom}
+      // options={{ headerTitle: 'Chat Room' }}
       />
     </TabTwoStack.Navigator>
   );
